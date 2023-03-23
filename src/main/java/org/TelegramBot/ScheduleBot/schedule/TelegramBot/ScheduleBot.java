@@ -95,7 +95,7 @@ public class ScheduleBot extends TelegramLongPollingBot {
                     registerUser(message);
                     Head(message);
                     break;
-                case"/updateSchedule":
+                case"/updateschedule":
                     if(IdAdministratora==message.getFrom().getId()){
                         downloadSchedulesFromUrl.downloadSheet();
                         sendMessage(chatId,"Розклад завантажено");
