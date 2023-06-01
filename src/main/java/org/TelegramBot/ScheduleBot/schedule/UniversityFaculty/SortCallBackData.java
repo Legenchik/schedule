@@ -1,12 +1,5 @@
 package org.TelegramBot.ScheduleBot.schedule.UniversityFaculty;
 
-
-
-
-
-
-
-
 public class SortCallBackData {
 
 

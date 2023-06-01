@@ -21,7 +21,7 @@ public class SearchGroupInSheetsFBK {
         int k = wb.getNumberOfSheets();
         for(int l=1;l<k;l++){
             XSSFSheet sheet = wb.getSheetAt(l);
-            for(int v=3;v<29;v=v+5){
+            for(int v=3;v<63;v=v+10){
                 XSSFRow row = sheet.getRow(v);
                 if(row!=null==true){
                     XSSFCell cell = row.getCell(1);

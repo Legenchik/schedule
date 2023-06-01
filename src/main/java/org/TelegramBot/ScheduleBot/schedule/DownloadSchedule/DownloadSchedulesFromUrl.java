@@ -9,6 +9,7 @@ import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 
+import lombok.SneakyThrows;
 import org.TelegramBot.ScheduleBot.schedule.TelegramBot.ScheduleBot;
 import org.TelegramBot.ScheduleBot.schedule.configBot.BotConfig;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -25,6 +26,7 @@ public class DownloadSchedulesFromUrl {
 		this.config = config;
 	}
 
+	@SneakyThrows
 	public  void  downloadSheet() {
 		URL website = null;
 		try {
@@ -68,6 +70,7 @@ public class DownloadSchedulesFromUrl {
 			throw new RuntimeException(e);
 		}
 		ScheduleBot scheduleBot = new ScheduleBot(config);
+		scheduleBot.getWbFBK();
 		scheduleBot.setWbFBK(wb);
 		//log.debug("Download is ok");
 

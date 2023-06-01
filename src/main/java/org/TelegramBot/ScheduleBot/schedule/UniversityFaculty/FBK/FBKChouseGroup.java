@@ -1,7 +1,6 @@
 package org.TelegramBot.ScheduleBot.schedule.UniversityFaculty.FBK;
 
 import org.TelegramBot.ScheduleBot.schedule.Sender.EditMessageSender;
-import org.TelegramBot.ScheduleBot.schedule.Sender.ExecuteMessageSender;
 import org.TelegramBot.ScheduleBot.schedule.configBot.BotConfig;
 import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageText;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;

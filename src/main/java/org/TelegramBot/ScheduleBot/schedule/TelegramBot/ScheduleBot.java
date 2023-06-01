@@ -3,6 +3,7 @@ package org.TelegramBot.ScheduleBot.schedule.TelegramBot;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.SneakyThrows;
 import org.TelegramBot.ScheduleBot.schedule.DateBase.Group;
 import org.TelegramBot.ScheduleBot.schedule.DateBase.GroupRepository;
 import org.TelegramBot.ScheduleBot.schedule.DateBase.User;
@@ -47,8 +48,9 @@ public class ScheduleBot extends TelegramLongPollingBot {
 
     public  XSSFWorkbook wbFBK =new XSSFWorkbook();
 
-    public void setWbFBK(XSSFWorkbook wbFBK) {
-        this.wbFBK = wbFBK;
+    @SneakyThrows
+    public void setWbFBK(XSSFWorkbook wbFBK1) {
+        this.wbFBK = wbFBK1;
     }
 
     public XSSFWorkbook getWbFBK() {
@@ -218,7 +220,7 @@ public class ScheduleBot extends TelegramLongPollingBot {
                 switch (faculty) {
                     case "FBK":
                         System.out.println(wbFBK.getNumberOfSheets());
-                       outScheduleThisDayUrlFBK.outScheduleThisDayUrl(chatId, group, wbFBK);
+                        outScheduleThisDayUrlFBK.outScheduleThisDayUrl(chatId, group, wbFBK);
                         break;
                 }
                 break;
